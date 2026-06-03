@@ -36,6 +36,7 @@ filetree
 │  │  ├── /SASCsmall-F/                
 │  │  ├── /SASCsmall-F for CI/                    
 │  │  └── /SASCsmall-F for VD/
+├── /train/  codebc train code   
 ```
 
 ### Performance Improvement of Stage Model on Blockchain-HumanEval Dataset
@@ -57,6 +58,18 @@ The performance of the CodeBC-VD model on the 'Address' task is shown in the fig
 
 The performance of the CodeBC model on the 'Address' task is shown in the figure. Compared to CodeBC-VD, which already demonstrates excellent functionality and security, CodeBC does not show significant improvements. However, some redundant code has been removed, indicating an improvement in the model's understanding of instructions.
 ![img 5](https://github.com/wanglingxiang1298/CodeBC/blob/master/pic/CodeBC-result_page-0001.jpg)
+
+### Train CodeBC
+```
+conda create -n codebc python==3.10
+cd train
+pip install -r requirements.txt
+sh scripts/train_seq_cl.sh
+```
+simple test
+```
+python simple_model_test.py
+```
 
 ### Reference
 <!-- links -->
